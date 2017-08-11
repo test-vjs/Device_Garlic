@@ -17,6 +17,9 @@
 
 $(call inherit-product, device/yu/garlic/full_garlic.mk)
 
+#Bootanimation res
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Inherit some common AEX stuff.
 $(call inherit-product, vendor/aosp/common.mk)
 
