@@ -130,6 +130,9 @@ BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 # CNE / DPM
 BOARD_USES_QCNE := true
 
+# CPUsets
+ENABLE_CPUSETS := true
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
