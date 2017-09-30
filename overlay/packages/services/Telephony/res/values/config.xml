@@ -21,7 +21,7 @@
     <bool name="config_support_handover_from">true</bool>
 
     <!-- Show enabled lte option for lte device -->
-    <bool name="config_enabled_lte" translatable="false">true</bool>
+    <bool name="config_enabled_lte" translatable="true">true</bool>
 
 <!-- NOTE: Many variables that used to be in this file have been migrated to
      CarrierConfigManager.java. Please consider whether new variables belong
