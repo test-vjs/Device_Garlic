@@ -89,7 +89,7 @@ LensInfo : Information of the lens present in the module.
     <SensorName>s5k4h8</SensorName>
     <EepromName>s5k4h8_p7201</EepromName>
     <FlashName>pmic</FlashName>
-    <ChromatixName>p7201_s5k4h8_chromatix</ChromatixName>
+    <ChromatixName>s5k4h8_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
     <Position>FRONT</Position>
     <MountAngle>90</MountAngle>
