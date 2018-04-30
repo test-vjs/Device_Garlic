@@ -115,6 +115,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8937 \
     libshim_libmmcamera \
+    libshim_camera \
+    libshim_cameraservice \
     libbson \
     libmm-qcamera \
     Snap
