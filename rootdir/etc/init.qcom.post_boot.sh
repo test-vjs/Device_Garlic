@@ -1498,7 +1498,7 @@ case "$target" in
                 echo 0 > /proc/sys/kernel/sched_boost
 
                 # HMP Task packing settings
-                echo 20 > /proc/sys/kernel/sched_small_task
+                echo 30 > /proc/sys/kernel/sched_small_task
                 echo 30 > /sys/devices/system/cpu/cpu0/sched_mostly_idle_load
                 echo 30 > /sys/devices/system/cpu/cpu1/sched_mostly_idle_load
                 echo 30 > /sys/devices/system/cpu/cpu2/sched_mostly_idle_load
@@ -1597,8 +1597,8 @@ case "$target" in
                 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 
                 # HMP scheduler (big.Little cluster related) settings
-                echo 93 > /proc/sys/kernel/sched_upmigrate
-                echo 83 > /proc/sys/kernel/sched_downmigrate
+                echo 90 > /proc/sys/kernel/sched_upmigrate
+                echo 60 > /proc/sys/kernel/sched_downmigrate
 
                 # Enable sched guided freq control
                 echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load
@@ -1611,9 +1611,9 @@ case "$target" in
                 # Enable core control
                 echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
                 echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
-                echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-                echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-                echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+                echo 90 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+                echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+                echo 1000 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
                 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
 
                 # re-enable thermal core_control
