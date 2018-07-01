@@ -116,6 +116,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8937 \
     libshim_libmmcamera \
+    libshim_camera \
+    camera.device@1.0-impl \
     SnapdragonCamera
 
 PRODUCT_COPY_FILES += \
