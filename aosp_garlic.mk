@@ -17,15 +17,21 @@
 
 $(call inherit-product, device/yu/garlic/full_garlic.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
-PRODUCT_NAME := lineage_garlic
+PRODUCT_NAME := aosp_garlic
 BOARD_VENDOR := yu
+PRODUCT_DEVICE := garlic
+PRODUCT_BRAND := YU
+PRODUCT_MODEL := Yureka Black
+PRODUCT_MANUFACTURER := YU
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
 
 TARGET_VENDOR_PRODUCT_NAME := garlic
+
+TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
