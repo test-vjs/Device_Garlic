@@ -59,10 +59,6 @@ persist.ts.rtmakeup=true
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.android.facelock
 persist.camera.eis.enable=1
 
-#Expose aux camera for below packages
-persist.camera.expose.aux=1
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.essential.klik,com.essential.testcamera,com.google.android.GoogleCamera
-
 # CNE
 persist.cne.feature=1
 
