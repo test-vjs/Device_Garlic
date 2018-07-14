@@ -115,9 +115,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8937 \
     libshim_libmmcamera \
-    libshim_camera \
-    camera.device@1.0-impl \
-    SnapdragonCamera
+    libbson \
+    libmm-qcamera \
+    Snap
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camera_config.xml:system/etc/camera/camera_config.xml \
@@ -128,9 +128,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/ov8856_chromatix.xml:system/etc/camera/ov8856_chromatix.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl \
     camera.device@3.2-impl \
-    libmm-qcamera \
+    android.hardware.camera.provider@2.4-impl \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
