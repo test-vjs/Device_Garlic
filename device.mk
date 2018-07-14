@@ -115,11 +115,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8937 \
     libshim_libmmcamera \
-    libshim_camera \
     libshim_cameraservice \
     libbson \
     libmm-qcamera \
-    Snap
+    Camera2
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camera_config.xml:system/etc/camera/camera_config.xml \
