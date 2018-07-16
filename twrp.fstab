@@ -6,7 +6,7 @@
 /vendor         ext4      /dev/block/bootdevice/by-name/oem                  flags=display="Vendor";wipeingui
 /system_image	emmc	  /dev/block/bootdevice/by-name/system		     flags=display="System Image"
 /vendor_image	emmc	  /dev/block/bootdevice/by-name/oem		     flags=display="Vendor Image"
-/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=encryptable=footer;length=-16384
+/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=encryptable=footer
 /cache          ext4      /dev/block/bootdevice/by-name/cache                flags=display="Cache"
 /recovery       emmc      /dev/block/bootdevice/by-name/recovery             flags=display="Recovery";backup=1
 /boot           emmc      /dev/block/bootdevice/by-name/boot                 flags=display="Boot"
