@@ -56,7 +56,6 @@ persist.camera.HAL3.enabled=1
 persist.camera.is_type=2
 persist.ts.postmakeup=true
 persist.ts.rtmakeup=true
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.android.facelock
 persist.camera.eis.enable=1
 
 # CNE
