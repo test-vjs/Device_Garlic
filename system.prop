@@ -50,13 +50,8 @@ qcom.bluetooth.soc=smd
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
 persist.camera.gyro.disable=0
-camera.lowpower.record.enable=1
-camera2.portability.force_api=1
 persist.camera.HAL3.enabled=1
-persist.camera.is_type=2
-persist.ts.postmakeup=true
-persist.ts.rtmakeup=true
-persist.camera.eis.enable=1
+media.camera.ts.monotonic=1
 
 # CNE
 persist.cne.feature=1
