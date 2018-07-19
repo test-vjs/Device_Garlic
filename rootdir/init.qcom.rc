@@ -889,3 +889,10 @@ service ppd /vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
+
+on property:sys.post_boot.parsed=1
+# Set Vibration Intensity to Maximum---
+	write /sys/class/timed_output/vibrator/vtg_level 3596
+
+# Set an Optimal Value for Write (Entropy)---
+	write /proc/sys/kernel/random/write_wakeup_threshold 128
