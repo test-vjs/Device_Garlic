@@ -116,10 +116,8 @@ PRODUCT_PACKAGES += \
     camera.msm8937 \
     libshim_libmmcamera \
     libshim_cameraservice \
-    libbson \
-    libmm-qcamera \
     Camera2
-
+    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camera_config.xml:system/etc/camera/camera_config.xml \
     $(LOCAL_PATH)/configs/camera/csidtg_camera.xml:system/etc/camera/csidtg_camera.xml \
