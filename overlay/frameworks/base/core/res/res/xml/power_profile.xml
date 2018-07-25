@@ -57,47 +57,46 @@
          <value>2</value> // cluster 1 has cpu4, cpu5
        </array> -->
     	<array name="cpu.clusters.cores">
-        	<value>4</value> <!-- cluster 0 has 4 cores -->
-        	<value>4</value> <!-- cluster 1 has 4 cores -->
+        	<value>4</value> <!-- cluster 0 has 4 LITTLE cores -->
+        	<value>4</value> <!-- cluster 1 has 4 big cores -->
     	</array>
 <!-- Different CPU speeds for cluster 0 as reported in
        /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state.
        There must be one of these for each cluster, labeled:
        cpu.speeds.cluster0, cpu.speeds.cluster1, etc... -->
     	<array name="cpu.speeds.cluster0">
-        	<value>960000</value>
-        	<value>1094400</value>
-        	<value>1209600</value>
-        	<value>1248000</value>
-        	<value>1344000</value>
-        	<value>1401000</value>
-        	<value>1497600</value>
-    	</array>
-<!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
-       Like cpu.speeds.cluster0, there must be one of these present for
-       each heterogeneous CPU cluster. -->
-    	<array name="cpu.active.cluster0">
-        	<value>100</value>
-        	<value>120</value>
-        	<value>140</value>
-        	<value>160</value>
-        	<value>200</value>
-        	<value>240</value>
-        	<value>280</value>
-    	</array>
-    	<array name="cpu.speeds.cluster1">
         	<value>768000</value>
         	<value>902400</value>
         	<value>998400</value>
         	<value>1094400</value>
         	<value>1209600</value>
     	</array>
+
+<!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
+       Like cpu.speeds.cluster0, there must be one of these present for
+       each heterogeneous CPU cluster. -->
+    	<array name="cpu.active.cluster0">
+        	<value>19</value>
+        	<value>29</value>
+        	<value>36</value>
+        	<value>46</value>
+        	<value>55</value>
+    	</array>
+    	<array name="cpu.speeds.cluster1">
+        	<value>960000</value>
+        	<value>1094400</value>
+        	<value>1248000</value>
+        	<value>1344000</value>
+        	<value>1401000</value>
+        	<value>1497600</value>
+    	</array>
     	<array name="cpu.active.cluster1">
-        	<value>80</value>
-        	<value>95</value>
-        	<value>105</value>
-        	<value>120</value>
-        	<value>140</value>
+        	<value>85</value>
+        	<value>126</value>
+        	<value>152</value>
+        	<value>197</value>
+        	<value>239</value>
+		<value>284</value>
     	</array>
 
 <!-- Current when CPU is idle and in suspend state -->
