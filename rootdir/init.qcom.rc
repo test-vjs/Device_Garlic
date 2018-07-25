@@ -710,7 +710,7 @@ service cameraserver /system/bin/cameraserver
     group audio camera input drmrpc
     ioprio rt 4
     setenv LD_PRELOAD "/vendor/lib/libshim_cameraservice.so"
-    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks
+    writepid /dev/cpuset/camera-daemon/tasks
 
 # Start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
