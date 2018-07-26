@@ -58,6 +58,9 @@ on init
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
     # CPU-Sets Configuration:
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/top-app/boost/cpus 4-7
