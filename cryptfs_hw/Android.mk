@@ -14,11 +14,9 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
 LOCAL_PATH:= $(call my-dir)
-
 include $(CLEAR_VARS)
-
-LOCAL_PROPRIETARY_MODULE := false
 
 sourceFiles := \
                cryptfs_hw.c
@@ -27,14 +25,18 @@ commonSharedLibraries := \
                         libcutils \
                         libutils \
                         libdl \
-                        libhardware
+                        libhardware \
+                        liblog
+
 commonIncludes := \
-                  hardware/libhardware/include/hardware/
+                  hardware/libhardware/include/hardware/ \
+                  $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
+
+LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_C_INCLUDES := $(commonIncludes)
 LOCAL_SRC_FILES := $(sourceFiles)
 
-LOCAL_LDLIBS := -llog
 LOCAL_MODULE_TAGS       := optional
 LOCAL_MODULE:= libcryptfs_hw
 LOCAL_SHARED_LIBRARIES := $(commonSharedLibraries)
@@ -51,4 +53,13 @@ ifeq ($(TARGET_USE_UFS_ICE),true)
 LOCAL_CFLAGS += -DUSE_ICE_FOR_STORAGE_ENCRYPTION
 endif
 
+ifeq ($(TARGET_LEGACY_HW_DISK_ENCRYPTION),true)
+LOCAL_CFLAGS += -DLEGACY_HW_DISK_ENCRYPTION
+endif
+
+ifeq ($(TARGET_KEYMASTER_WAIT_FOR_QSEE),true)
+LOCAL_CFLAGS += -DWAIT_FOR_QSEE
+endif
+
 include $(BUILD_SHARED_LIBRARY)
+endif
