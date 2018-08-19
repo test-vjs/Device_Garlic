@@ -335,8 +335,8 @@
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
     <!-- Does the battery LED support multiple colors?
-	Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">true</bool>
+	Used to decide if the user can change the colors 
+    <bool name="config_multiColorBatteryLed">true</bool> -->
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
     <bool name="config_dynamic_bind_ims">true</bool>
