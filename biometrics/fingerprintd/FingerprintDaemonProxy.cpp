@@ -23,7 +23,9 @@
 #include <hardware/hw_auth_token.h>
 #include <utils/Log.h>
 
-#include <android/security/IKeystoreService.h>
+/* #include <android/security/IKeystoreService.h>
+*/
+
 #include "FingerprintDaemonProxy.h"
 
 namespace android {
@@ -88,7 +90,7 @@ void FingerprintDaemonProxy::hal_notify_callback(const fingerprint_msg_t *msg) {
     }
 }
 
-void FingerprintDaemonProxy::notifyKeystore(const uint8_t *auth_token, const size_t auth_token_length) {
+/* void FingerprintDaemonProxy::notifyKeystore(const uint8_t *auth_token, const size_t auth_token_length) {
     if (auth_token != NULL && auth_token_length > 0) {
         // TODO: cache service?
         sp < IServiceManager > sm = defaultServiceManager();
@@ -106,7 +108,7 @@ void FingerprintDaemonProxy::notifyKeystore(const uint8_t *auth_token, const siz
             ALOGE("Unable to communicate with KeyStore");
         }
     }
-}
+}*/
 
 void FingerprintDaemonProxy::init(const sp<IFingerprintDaemonCallback>& callback) {
     if (mCallback != NULL && IInterface::asBinder(callback) != IInterface::asBinder(mCallback)) {
