@@ -27,7 +27,6 @@
 #include <android-base/logging.h>
 
 #include "property_service.h"
-#include "util.h"
 #include "vendor_init.h"
 
 #define DRV_INFO "/sys/devices/platform/fp_drv/fp_drv_info"
